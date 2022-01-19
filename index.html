@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./index.css">
+  <script src="./script.js" defer></script>
+
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+</head>
+<body>
+  <div class="container">
+    <header class="flex">
+      <img class="logo" src="./images/logo.svg" alt="logo">
+      <div class="score-box flex">
+        <p class="uppercase text-score fs-200 letter-spacing-3">Score</p>
+        <p id="score">0</p>
+      </div>
+    </header>
+    <main>
+      <div class="main grid" data-visible="true">
+        <div class="circle paper" data-index="0"><img src="./images/icon-paper.svg" alt="paper"></div>
+        <div class="circle scissors" data-index="1"><img src="./images/icon-scissors.svg" alt="scissors"></div>
+        <div class="circle rock" data-index="2"><img src="./images/icon-rock.svg" alt="rock"></div>
+      </div>
+      <div class="results grid" data-visible="false" data-results-open="false">
+        <div class="player-picked player-info" id="player-picked">
+          <p class="uppercase text-white letter-spacing-3 fs-400">You picked</p>
+        </div>
+        <div class="results-tab" data-visible="false">
+          <h1 class="uppercase text-white bold fs-700" id="results-header">You Lose</h1>
+          <button class="btn-play uppercase letter-spacing-3">Play Again</button>
+        </div>
+        <div class="bot-picked player-info" id="bot-picked">
+          <p class="uppercase text-white letter-spacing-3 fs-400">The House Picked</p>
+          <div class="circle circle--big circle-big-placeholder"></div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <button class="btn-rules uppercase text-white letter-spacing-3">Rules</button>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">saidkhan</a>.
+      </div>
+    </footer>
+    <div class="rules-modal"  data-visible="false">
+      <div class="modal grid">
+        <p class="fs-600 uppercase text-dark">Rules</p>
+        <button class="close-modal"></button>
+        <img src="./images/image-rules.svg" alt="Rules">
+      </div>
+    </div>
+    <div class="page-wrapper" data-visible="false"></div>
+  </div>
+</body>
+</html>
